@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Movie;
 use Illuminate\Http\Request;
 
 class PageController extends Controller
@@ -11,9 +12,8 @@ class PageController extends Controller
     }
 
 public function listaFilm() {
-    //$film = Film::all(); 
-    //return view('listaFilm', compact('film'));
-    return view('listaFilm');
+    $Movies = Movie::all();
+    return view('listaFilm', compact('Movies'));
 }
 
 }
