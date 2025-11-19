@@ -1,19 +1,20 @@
 @extends("layouts/master")
 
 @section("title")
-    Homepage
+    Lista film
 @endsection
 
 @section("main")
-    <main class="bg-light min-vh-100 d-flex align-items-center">
-        <div class="container">
+    <div class="container">
             <div class="row justify-content-center text-center">
+                @foreach ($films as $film)
+                    <x-card>
+
+                    </x-card>
+                @endforeach
                 <div class="col-md-8">
-                    <h1 class="display-4 mb-4">Benvenuto nella mia pagina</h1>
-                    <p class="lead mb-4">Scopri la lista dei migliori film selezionati per te!</p>
                     <a href="{{ "listaFilm" }}" class="btn btn-primary btn-lg shadow">Vai alla lista dei film</a>
                 </div>
             </div>
         </div>
-    </main>
 @endsection
